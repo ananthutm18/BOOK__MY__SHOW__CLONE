@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book my show</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="data:image/jpeg;base64,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">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="navarea">
+        <div class="navbar">
+            <div class="leftnav">
+            <div class="nav-logo">
+            </div>
+            
+
+            <div class="navsearch">
+              
+                <input placeholder="Search for Movies, Events, Plays, Sports and Activities" class="search-text">
+               
+            </div>
+        </div>
+          <div class="rightnav">
+
+            <div class="nav-lacation ">
+                <div><p class="loc">Location</p></div>
+               
+            </div>
+            <div class="navSignin">
+               <div><button class="signbutt">Sign in</button></div>
+                
+            </div>
+            <div class="navmenu">
+                <div><i class="fa-solid fa-bars"></i></div>
+                 
+             </div>
+
+        </div>
+    </div>
+
+        <div class="panel">
+
+          
+                <div class="panel2">
+
+                    <p>Movie</p>
+                    <p>Stream </p>
+                    <p>Events</p>
+                    <p>Plays</p>
+                    <p>Sports</p>
+                    <p>Activities</p>
+                    <p>Buzz</p>
+                   
+
+                    </div>
+                    <div class="panel3">
+                        <p>List Your show</p>
+                        <p>Corporate </p>
+                        <p>Offer</p>
+                        <p>Gift Cards</p>
+                      
+
+
+                        
+                    </div>
+                   
+            
+
+            
+        </div>
+
+    </div>
+
+    
+
+    <div class="bodyimage">
+
+    </div>
+
+
+
+
+    <div class="mainsection">
+
+   
+    <div class="content">
+        <div class="box1 box">
+            <div class="boxcontent">
+           
+            <div class="box-iamge1 box-image">
+                
+            </div>
+            <h1>Mnjummel Boys </h1>
+            <p>Adventure | Drama | Thriller
+            </p>
+        </div>
+        </div>
+
+
+        <div class="box2 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge2 box-image">
+                    
+                </div>
+                <h1>Premalu </h1>
+                <p>Comedy | Drama | Family
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box3 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge3 box-image">
+                    
+                </div>
+                <h1>AnchakallaKokkan </h1>
+                <p>Adventure | Action | Thriller
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box4 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge4 box-image">
+                    
+                </div>
+                <h1>Godxilla X Kong </h1>
+                <p>Aaction | Drama | Thriller
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box9 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge9 box-image">
+                    
+                </div>
+                <h1>Bramayugam </h1>
+                <p>Horro | Drama | Thriller
+                </p>
+            </div>
+        </div>
+
+        <div class="box10 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge10 box-image">
+                    
+                </div>
+                <h1>Shaitaan </h1>
+                <p>Aaction | Drama | Thriller
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="box5 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge5 box-image">
+                    
+                </div>
+                <h1>Yodha </h1>
+                <p>Action | Drama | Thriller
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box6 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge6 box-image">
+                    
+                </div>
+                <h1>Joshud </h1>
+                <p>Action | Drama | Thriller
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box7 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge7 box-image">
+                    
+                </div>
+                <h1>Thankamani </h1>
+                <p>Adventure | Drama | Thriller
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box8 box">
+            <div class="boxcontent">
+           
+                <div class="box-iamge8 box-image">
+                    
+                </div>
+                <h1>Dune 2 </h1>
+                <p>Action | Si-Fi | Thriller
+                </p>
+            </div>
+        </div>
+    
+       
+</div>
+    </div>
+    
+    
+
+
+    <footer class="foot">
+
+        <div class="footseg1">
+            <div class="para"><i class="fa-solid fa-tent"></i><p class="mainpara">List your show   </p>
+             <div> Got as how, event, activity or a greate experience? partner with us & get listed on Book my Show </div> </div>
+           <button class="signbutt">Contact Us Today!</button>
+        </div>
+    
+      
+    
+    
+                <div class="footseg4">
+                    <div class="logolast">
+                       <div class="logoo1"><div><i class="fa-solid fa-phone socicon"></i></div><div><p>Talk with Us</p></div></div>
+                       <div class="logoo1"><div><i class="fa-solid fa-envelope-open-text socicon"></i></div><div><p>Email Us</p></div></div>
+                       <div class="logoo1"><div><i class="fa-solid fa-ticket socicon" ></i></div><div><p>Ticket policies</p></div></div>
+                    </div>
+                    </div>
+    
+                 
+                         
+                   
+    
+                    <div class="footseg5">
+                        <div class="lastsec">
+                        <div class="lasthead"><p>Movies now showing in Kochi</p></div>
+                        <div class="lastdet"><p>Manjumal Boys| Premalu | Godzilla x Kong| Kung Fu Panda 4</p></div>
+                    </div>
+                    <div class="lastsec">
+                        <div class="lasthead"><p>Movies now showing in Alappuzha</p></div>
+                        <div class="lastdet"><p>Manjumal Boys| Bramayugam | Anchakallakokkan</p></div>
+                    </div>
+                    <div class="lastsec">
+                        <div class="lasthead"><p>Movies now showing in Kochi</p></div>
+                        <div class="lastdet"><p>Manjumal Boys| | Kung Fu Panda 4 | Godzilla x Kong|Bramayugam</p></div>
+                    </div>
+                    <div class="lastsec">
+                        <div class="lasthead"><p>Movies now showing in Kochi</p></div>
+                        <div class="lastdet"><p>Kong X Godzilla| Premalu | Godzilla x Kong| Thankamani</p></div>
+                    </div>
+
+                       
+                    </div>
+
+                    <div class="footseg6">
+                       
+                        <div class="logcont"> <div class="loglast"></div></div>
+
+                       
+                        </div>
+
+                        <div class="footseg7">
+                            <div class="socials"><div><i class="fa-brands fa-facebook"></i></div>
+                            <div><i class="fa-solid fa-envelope"></i></div>
+                            <div><i class="fa-brands fa-square-instagram"></i></div>
+                            <div><i class="fa-brands fa-youtube"></i></div>
+                            <div><i class="fa-brands fa-square-x-twitter"></i></div>
+                            </div>
+                            <div class="lastcopy">
+                            <p>Copyright 2024  © Bigtree Entertainment Pvt. Ltd. All Rights Reserved.</p>
+                            <p>The content and images used on this site are copyright protected and copyrights vests with the respective owners. 
+                                The usage of the content and images on this website is intended to promote the works and 
+                                no endorsement of the artist shall be implied. Unauthorized use is prohibited and punishable by law.
+                            </p>
+
+                        </div>
+                            
+                            </div>
+                   
+    
+    
+                </div>
+    
+    </footer>
+
+    
+</body>
+</html>
